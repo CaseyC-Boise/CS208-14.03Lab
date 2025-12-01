@@ -3,20 +3,21 @@ extends layout
 block content
   h1 Customer Comments
 
-  if error
-    p.error-message= error
+  form(method="POST" action="/comments")
+    input(type="text" name="name" placeholder="Your name" required)
+    br
+    textarea(name="message" placeholder="Your comment" required)
+    br
+    button(type="submit") Submit
 
-  form.comment-form(action="/comments" method="POST")
-    input(type="text" name="name" placeholder="Your name (optional)")
-    textarea(name="message" required placeholder="Your comment...")
-    button(type="submit") Post Comment
+  hr
 
-  if comments.length > 0
-    ul.comment-list
-      each c in comments
-        li.comment
-          h3= c.name
-          p= c.message
-          span.date Posted on #{c.created_at}
-  else
-    p No comments yet — be the first!
+  each c in comments
+    p
+      strong= c.name
+      |  says:
+      br
+      |  #{c.message}
+      br
+      small Posted on #{c.created_at}
+      hr

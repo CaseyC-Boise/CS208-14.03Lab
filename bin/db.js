@@ -1,7 +1,7 @@
-// db.js
+// bin/db.js
 const mysql = require('mysql2');
 
-let connection = null;
+let connection;
 
 function createDbConnection() {
     if (!connection) {
@@ -14,34 +14,20 @@ function createDbConnection() {
 
         connection.connect(err => {
             if (err) {
-                console.error('Error connecting to database:', err);
-                
+                console.error("Database connection error:", err);
             } else {
-                console.log('Database connected!');
+                console.log("MySQL connected.");
             }
         });
     }
-    console.log('Using existing database connection');
     return connection;
 }
 
 function dbMiddleware(req, res, next) {
     req.db = createDbConnection();
-    console.log(`DB middleware id: ${req.db.threadId}, called at: ${Date.now()}`);
     next();
 }
 
-function closeDbConnection() {
-    if (connection) {
-        connection.end(err => {
-            if (err) {
-                console.error('Error closing database connection:', err);
-            } else {
-                console.log('Database connection closed.');
-                connection = null;
-            }
-        });
-    }
-}
+module.exports = { dbMiddleware };
 
-module.exports = { dbMiddleware, createDbConnection, closeDbConnection };
+

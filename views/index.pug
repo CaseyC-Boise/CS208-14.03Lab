@@ -1,15 +1,7 @@
 extends layout
 
 block content
-  section.hero
-    h1 Fresh Donuts Every Morning
-    p Serving the downtown community since 1992.
-    a.hero-btn(href="/menu") View Our Menu
-
-  section.info
-    h2 Why You'll Love Downtown Donuts
-    ul
-      li Small, family-owned business
-      li Fresh ingredients every day
-      li Locally roasted coffee
-      li Cozy atmosphere and friendly staff
+  h1 TODO List
+  ul
+    each todo in todos
+      li= todo.description
