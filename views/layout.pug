@@ -1,7 +1,26 @@
 doctype html
 html
   head
-    title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    title= title || "Downtown Donuts"
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    link(rel="stylesheet", href="/stylesheets/style.css")
+    script(src="/javascripts/menu.js" defer)
   body
-    block content
+
+    header.navbar
+      .nav-brand
+        a(href="/") Downtown Donuts
+
+      button.menu-toggle(type="button") ☰
+
+      nav.nav-links
+        a(href="/") Home
+        a(href="/menu") Menu
+        a(href="/about") About
+        a(href="/comments") Comments
+
+    main.content
+      block content
+
+    footer.footer
+      p © 2024 Downtown Donuts — Established 1992

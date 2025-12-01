@@ -1,23 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
-  ol
-  each val in todos
-    li
-      span= val.task + ' - '
-      if val.completed > 0
-        span Completed
-      else
-        pan Not Completed
-      form(method='POST' action='/delete')
-        input(type='hidden', name='id', value=val.id)
-        button(type='submit') Delete
+  section.hero
+    h1 Fresh Donuts Every Morning
+    p Serving the downtown community since 1992.
+    a.hero-btn(href="/menu") View Our Menu
 
-  hr
-  h2 Add a new task
-  form(method='POST' action='/create')
-    label(for='task') Task:
-    input(type='text', name='task', id='task', required)
-    button(type='submit') Create Task
+  section.info
+    h2 Why You'll Love Downtown Donuts
+    ul
+      li Small, family-owned business
+      li Fresh ingredients every day
+      li Locally roasted coffee
+      li Cozy atmosphere and friendly staff

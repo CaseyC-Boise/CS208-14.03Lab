@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1 Customer Comments
+
+  if error
+    p.error-message= error
+
+  form.comment-form(action="/comments" method="POST")
+    input(type="text" name="name" placeholder="Your name (optional)")
+    textarea(name="message" required placeholder="Your comment...")
+    button(type="submit") Post Comment
+
+  if comments.length > 0
+    ul.comment-list
+      each c in comments
+        li.comment
+          h3= c.name
+          p= c.message
+          span.date Posted on #{c.created_at}
+  else
+    p No comments yet — be the first!
