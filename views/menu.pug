@@ -1,13 +1,68 @@
 extends layout
 
 block content
-  h1 Our Menu
+  section.menu-header
+    h1 Our Menu
+    p All donuts made fresh daily using traditional recipes
 
-  p Download full PDF:
-  a.pdf-btn(href="/menu.pdf" target="_blank") View Menu PDF
+  section.menu-categories
+    .menu-category
+      h2 Classic Donuts
+      .menu-items
+        .menu-item
+          h3 Glazed
+          p Our signature classic with a sweet glaze
+        .menu-item
+          h3 Chocolate Frosted
+          p Rich chocolate frosting on a fluffy donut
+        .menu-item
+          h3 Boston Cream
+          p Filled with vanilla custard and topped with chocolate
+        .menu-item
+          h3 Jelly Filled
+          p Raspberry or strawberry jelly center
 
-  h2 Order Online
-  ul.delivery-links
-    li: a(href="https://www.ubereats.com" target="_blank") UberEats
-    li: a(href="https://www.doordash.com" target="_blank") DoorDash
-    li: a(href="https://www.grubhub.com" target="_blank") GrubHub
+    .menu-category
+      h2 Specialty Donuts
+      .menu-items
+        .menu-item
+          h3 Maple Bacon Bar
+          p Maple glaze with crispy bacon bits
+        .menu-item
+          h3 Blueberry Cake
+          p Dense cake donut with fresh blueberries
+        .menu-item
+          h3 Apple Fritter
+          p Loaded with cinnamon apples
+        .menu-item
+          h3 Old Fashioned
+          p Traditional buttermilk cake donut
+
+    .menu-category
+      h2 Beverages
+      .menu-items
+        .menu-item
+          h3 Fresh Brewed Coffee
+          p Regular or decaf, hot or iced
+        .menu-item
+          h3 Espresso Drinks
+          p Lattes, cappuccinos, and americanos
+        .menu-item
+          h3 Hot Chocolate
+          p Rich and creamy
+        .menu-item
+          h3 Fresh Juice
+          p Orange or apple
+
+  section.menu-download
+    h2 Download Full Menu
+    p View our complete menu with prices and seasonal specials
+    a.pdf-btn(href="/menu.pdf" target="_blank" download) Download Menu PDF
+
+  section.order-online
+    h2 Order for Delivery
+    p Get Downtown Donuts delivered to your door
+    ul.delivery-links
+      li: a(href="https://www.ubereats.com" target="_blank") 🚗 UberEats
+      li: a(href="https://www.doordash.com" target="_blank") 🚗 DoorDash
+      li: a(href="https://www.grubhub.com" target="_blank") 🚗 GrubHub

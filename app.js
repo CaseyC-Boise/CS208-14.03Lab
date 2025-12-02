@@ -8,6 +8,8 @@ const { dbMiddleware } = require('./bin/db');
 // Routers
 const indexRouter = require('./routes/index');
 const commentsRouter = require('./routes/comments');
+const menuRouter = require('./routes/menu');
+const aboutRouter = require('./routes/about');
 
 const app = express();
 
@@ -24,6 +26,8 @@ app.use(dbMiddleware);
 // Routes
 app.use('/', indexRouter);
 app.use('/comments', commentsRouter);
+app.use('/menu', menuRouter);
+app.use('/about', aboutRouter);
 
 // 404 handler
 app.use(function (req, res, next) {

@@ -1,7 +1,30 @@
 extends layout
 
 block content
-  h1 TODO List
-  ul
-    each todo in todos
-      li= todo.description
+  section.hero
+    h1 Welcome to Downtown Donuts
+    p.hero-subtitle Fresh, handmade donuts and coffee since 1992
+    p We're proud to serve our community with delicious, traditional recipes made fresh every morning.
+    a.hero-btn(href="/menu") View Our Menu
+
+  section.features
+    .feature-grid
+      .feature-card
+        h2 Fresh Daily
+        p Every donut is handmade with care using our time-tested recipes passed down through generations.
+      
+      .feature-card
+        h2 Premium Coffee
+        p Enjoy our signature coffee blends, perfectly paired with your favorite donut.
+      
+      .feature-card
+        h2 Family Owned
+        p A local favorite since 1992, we're committed to serving quality and building community.
+
+  section.cta-section
+    h2 Order Online Today
+    p Get Downtown Donuts delivered right to your door
+    .delivery-buttons
+      a.delivery-btn(href="https://www.ubereats.com" target="_blank") Order on UberEats
+      a.delivery-btn(href="https://www.doordash.com" target="_blank") Order on DoorDash
+      a.delivery-btn(href="https://www.grubhub.com" target="_blank") Order on GrubHub

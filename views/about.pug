@@ -1,15 +1,42 @@
 extends layout
 
 block content
-  h1 Our Story
+  section.about-hero
+    h1 Our Story
 
-  p Downtown Donuts began in 1992 as a small family dream.
-  p Over the years, we've become a local staple where students, workers, and families gather for fresh donuts and coffee.
-  p We take pride in using traditional recipes, hand-made each morning.
+  section.about-content
+    .about-section
+      h2 Where It All Began
+      p Downtown Donuts opened its doors in 1992 as a small family dream in the heart of downtown. What started as a simple donut shop has grown into a beloved community gathering place where students, workers, and families come together over fresh donuts and coffee.
 
-  h2 Our Values
-  ul
-    li Quality ingredients
-    li Friendly service
-    li Community-first mindset
-    li Fresh baked donuts every day
+    .about-section
+      h2 Our Commitment
+      p For over 30 years, we've remained committed to the same principles that guided us from day one. Every donut is handmade using traditional recipes, prepared fresh each morning before we open. We believe in quality over quantity, and that belief shows in every bite.
+
+    .about-section
+      h2 Part of the Community
+      p We're more than just a donut shop—we're a part of the fabric of this neighborhood. From sponsoring local sports teams to hosting community events, we're proud to give back to the community that has supported us all these years.
+
+  section.values-section
+    h2 Our Values
+    .values-grid
+      .value-card
+        h3 Quality Ingredients
+        p We source the finest ingredients and never cut corners. Every donut deserves the best.
+      
+      .value-card
+        h3 Friendly Service
+        p Our team treats every customer like family. Your smile is our success.
+      
+      .value-card
+        h3 Community First
+        p Supporting local and giving back to our neighbors isn't just good business—it's the right thing to do.
+      
+      .value-card
+        h3 Fresh Daily
+        p Made fresh every morning, never day-old. That's our promise to you.
+
+  section.visit-section
+    h2 Come Visit Us
+    p Stop by and experience what has made us a downtown favorite for over three decades.
+    a.cta-button(href="/menu") See Our Menu

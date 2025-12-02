@@ -1,10 +1,10 @@
-// routes/index.js
+// routes/about.js
 const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    res.render("index", { 
-        title: "Downtown Donuts - Fresh Donuts Daily Since 1992"
+    res.render("about", { 
+        title: "About Us - Downtown Donuts"
     });
 });
 
