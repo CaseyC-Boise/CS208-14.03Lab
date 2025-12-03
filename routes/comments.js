@@ -2,7 +2,6 @@
 const express = require("express");
 const router = express.Router();
 
-// Show comments
 router.get("/", (req, res) => {
     req.db.query("SELECT * FROM comments ORDER BY created_at DESC", (err, results) => {
         if (err) {
@@ -21,16 +20,13 @@ router.get("/", (req, res) => {
     });
 });
 
-// Add a comment
 router.post("/", (req, res) => {
     const { name, message } = req.body;
 
-    // Basic validation
     if (!name || !message || name.trim() === "" || message.trim() === "") {
         return res.redirect("/comments?error=missing");
     }
 
-    // Sanitize inputs (trim whitespace)
     const sanitizedName = name.trim().substring(0, 255);
     const sanitizedMessage = message.trim().substring(0, 1000);
 

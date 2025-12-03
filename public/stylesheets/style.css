@@ -16,7 +16,6 @@ body {
   margin: auto;
 }
 
-/* Navbar */
 .navbar {
   background: #10291D;
   color: #F7F7F7;
@@ -98,7 +97,6 @@ body {
   }
 }
 
-/* Hero Section */
 .hero {
   text-align: center;
   padding: 60px 20px;
@@ -149,7 +147,6 @@ body {
   box-shadow: 0 6px 20px rgba(247, 198, 74, 0.5);
 }
 
-/* Features Grid */
 .features {
   margin: 50px 0;
 }
@@ -188,7 +185,6 @@ body {
   line-height: 1.7;
 }
 
-/* CTA Section */
 .cta-section {
   text-align: center;
   padding: 50px 20px;
@@ -234,7 +230,6 @@ body {
   transform: scale(1.05);
 }
 
-/* Menu Page */
 .menu-header {
   text-align: center;
   padding: 40px 20px;
@@ -372,7 +367,6 @@ body {
   background: #e5b438;
 }
 
-/* About Page */
 .about-hero {
   text-align: center;
   padding: 50px 20px;
@@ -500,7 +494,6 @@ body {
   transform: translateY(-2px);
 }
 
-/* Comments Page */
 .comments-header {
   text-align: center;
   padding: 40px 20px;
@@ -656,7 +649,6 @@ body {
   border-radius: 10px;
 }
 
-/* Footer */
 .footer {
   margin-top: 60px;
   padding: 30px 20px;
@@ -671,7 +663,6 @@ body {
   margin: 0;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
   .hero h1,
   .about-hero h1 {

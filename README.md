@@ -44,7 +44,7 @@ Threads: 1  Questions: 90  Slow queries: 0  Opens: 33  Open tables: 26  Queries 
 Create the initial tables:
 
 ```bash
-sudo mysql -u root -p < ./setup_scripts/create_demo_table.sql
+sudo mysql -u root -p < setup_scripts/create_comments_table.sql
 ```
 
 Refer to the create_demo_table.sql file for details about the table and its fields. 
